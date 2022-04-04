@@ -58,7 +58,7 @@ EFUSE_CMD= -U efuse:w:0x$(EFUSE):m
 endif
 
 # Default lock fuse configuration (NO lock)
-LOCKFUSE ?= 2f# APP protect mode 1, BL protect mode 1
+LOCKFUSE ?= ef # APP protect mode 1, BL protect mode 1, highest two bits set to 1 on ATmega328p
 
 #
 # avrdude commands to erase chip, unlock memory, and program fuses.
